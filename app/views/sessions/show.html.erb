@@ -5,35 +5,15 @@
 
 <table>
     <tr>
-        <td>Auth Provider: </td>
-        <td><%= @auth["provider"] %></td>
-    </tr>
-    <tr>
-        <td>Unique ID: </td>
-        <td><%= @auth["uid"] %></td>
-    </tr>
-    <tr>
         <td>Email: </td>
         <td><%= @auth["email"] %></td>
     </tr>
     <tr>
-        <td>Username: </td>
-        <td><%= @auth["username"] %></td>
-    </tr>
-    <tr>
-        <td>Name: </td>
+        <td>Full Name: </td>
         <td><%= @auth["name"] %></td>
     </tr>
     <tr>
-        <td>First name: </td>
-        <td><%= @auth["first_name"] %></td>
-    </tr>
-    <tr>
-        <td>Last name: </td>
-        <td><%= @auth["last_name"] %></td>
-    </tr>
-    <tr>
-        <td>Mugshot: </td>
+        <td>Profile Picture: </td>
         <td><img src="<%= @auth["image_url"] %>" width="50" /></td>
     </tr>
     <tr>
