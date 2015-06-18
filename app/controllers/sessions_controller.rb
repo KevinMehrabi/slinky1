@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       @auth = User.from_omniauth(request.env['omniauth.auth'])
       session['auth'] = @auth
       redirect_to sessions_show_path
-      flash[:success] = "Welcome, #{@auth["name"]}"
+      flash[:success] = "Welcome, #{@auth["first_name"]}"
     rescue
       flash[:warning] = "There was an error while trying to authenticate you..."
     end
