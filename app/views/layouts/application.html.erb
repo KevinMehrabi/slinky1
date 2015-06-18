@@ -6,50 +6,34 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="getLocation()">
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-<nav class="navbar navbar-inverse navbar-static-top">
-    <ul class="nav-list nav navbar-nav">
-        <span class="icon-1">
-          <li class="fa fa-home fa-5x fa-fw"></li>
-          <li class="nav-word">Home</li> 
-        </span>
-        <span class="icon-2">
-          <li class="fa fa-search fa-5x fa-fw"></li> 
-          <li class="nav-word">Search</li>
-        </span>
-        <span class="icon-3">
-          <li class="fa fa-book fa-5x fa-fw"></li> 
-          <li class="nav-word">Contacts</li>
-        </span>
-        <span class="icon-4">
-          <li class="fa fa-sign-in fa-5x fa-fw"></li> 
-          <li class="nav-word">Sign In</li>
-        </span>
-        <span class="icon-5">
-          <li class="fa fa-sign-out fa-5x fa-fw"></li> 
-          <li class="nav-word">Logout</li>
-        </span>
-    </ul>
-    </nav>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <ul class="nav-list nav navbar-nav">
+          <span class="icon-1">
+            <li class="fa fa-home fa-5x fa-fw"></li>
+            <li class="nav-word">Home</li> 
+          </span>
+          <span class="icon-2">
+            <li class="fa fa-search fa-5x fa-fw"></li> 
+            <li class="nav-word">Search</li>
+          </span>
+          <span class="icon-3">
+            <li class="fa fa-book fa-5x fa-fw"></li> 
+            <li class="nav-word">Contacts</li>
+          </span>
+          <span class="icon-4">
+            <li class="fa fa-sign-in fa-5x fa-fw"></li> 
+            <li class="nav-word">Sign In</li>
+          </span>
+          <span class="icon-5">
+            <li class="fa fa-sign-out fa-5x fa-fw"></li> 
+            <li class="nav-word">Logout</li>
+          </span>
+      </ul>
+  </nav>
 
 
   <nav class="navbar navbar-inverse navbar-static-top">
