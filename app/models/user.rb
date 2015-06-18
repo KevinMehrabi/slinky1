@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 			user.image_url = auth_hash["info"]['image']
 			user.url = auth_hash['info']['urls']['public_profile']
 		    user.save!
-
+		    user
 		end
 		
 	end
