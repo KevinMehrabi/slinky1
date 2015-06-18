@@ -21,7 +21,11 @@
         <td><%= @auth["url"] %></td>
     </tr>
     <tr>
-        <td>Location: </td>
+        <td>Country: </td>
+        <td><%= @auth["country"].upcase %></td>
+    </tr>
+    <tr>
+        <td>Region: </td>
         <td><%= @auth["location"] %></td>
     </tr>
 </table>
