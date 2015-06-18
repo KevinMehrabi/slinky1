@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+	geocoded_by :full_address
+	after_validation :geocode
+
+	def full_address
+	  [address, city, state, zipcode].join(', ')
+	end
 	class << self
 		def from_omniauth(auth_hash)
 			user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
