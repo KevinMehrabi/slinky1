@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def show
-      redirect_to root_path unless session['auth']
       @auth = session['auth']
+      redirect_to root_path unless session['auth']
   end
 
   def create
