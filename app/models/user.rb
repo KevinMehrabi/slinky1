@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 			user.username = auth_hash["info"]['nickname']
 			user.location = auth_hash['info']['location']['name']
 			user.image_url = auth_hash["info"]['image']
+			user.url = auth_hash['info']['urls']['public_profile']
 		end
 		
 	end
