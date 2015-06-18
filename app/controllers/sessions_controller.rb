@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
       redirect_to sessions_show_path
       flash[:success] = "Welcome, #{@auth["name"]}"
     rescue
+      flash[:warning] = "There was an error while trying to authenticate you..."
     end
   end
 
