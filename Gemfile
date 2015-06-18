@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
 
 gem 'figaro'
+gem 'geocoder'
 
 gem 'omniauth-linkedin-oauth2'
 
