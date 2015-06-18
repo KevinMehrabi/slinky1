@@ -38,13 +38,11 @@ function showPosition(position) {
     </ul>
   </nav>
 
-<hr>  
-  <strong>
-    <% flash.each do |key, value| %>
-      <%= key %>: <%= value %>
-    <% end %>
-  </strong>
-<hr>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
 
 <%= yield %>
 
