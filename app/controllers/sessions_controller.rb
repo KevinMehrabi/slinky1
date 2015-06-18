@@ -8,9 +8,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @auth = User.from_omniauth(request.env['omniauth.auth'])
-    session['auth'] = @auth
-    redirect_to sessions_show_path
+    begin
+      @auth = User.from_omniauth(request.env['omniauth.auth'])
+      session['auth'] = @auth
+      redirect_to sessions_show_path
+    rescue
+    end
   end
 
   def destroy
