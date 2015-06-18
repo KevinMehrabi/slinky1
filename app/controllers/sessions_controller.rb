@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-      @auth = request.env['omniauth.auth']
+      @auth = User.from_omniauth(request.env['omniauth.auth'])
       session['auth'] = @auth
       redirect_to sessions_show_path
   end
