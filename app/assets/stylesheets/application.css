@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+li {
+	display: block;
+	margin: 0 auto;
+}
+.nav-word {
+	list-style-type: none;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+}
+
+.nav-list {
+	background-color: #999;
+	width: 100%;
+	list-style-type: none;
+	display: inline-block;
+	text-align: center;
+	
+}
+.icon-1, .icon-2, .icon-3, .icon-4, .icon-5 {
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	width: 19.5%;
+	border: 3px solid black;
+}
+.icon-1:hover, .icon-2:hover, .icon-3:hover, .icon-4:hover, .icon-5:hover {
+	color: blue;
+}
+.authenticate-btn {
+	width: 30%;
+}
+
+.slinky-image {
+	
+}
+
