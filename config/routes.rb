@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/destroy'
+
+  get 'users/edit'
+
+  get 'users/update'
+
   get 'sessions/new'
 
   get 'sessions/create'
@@ -10,6 +24,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
 
   get 'sessions/destroy'
+  resources :users
 
   get "/auth/:provider/callback" => "sessions#create"
 
