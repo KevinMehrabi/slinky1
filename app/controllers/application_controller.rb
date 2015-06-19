@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   def action
     @lat_lng = cookies[:lat_lng].split("|")
+    @user=@current_user
+    @user.currentlocation=@lat_lng
   end
 
   include SessionsHelper
