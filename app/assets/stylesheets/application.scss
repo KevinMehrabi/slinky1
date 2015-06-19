@@ -88,6 +88,9 @@ a {
 	}
 }
 @media screen and (max-width: 560px) {
+	p {
+		margin: 0 0 50px;
+	}
 	body {
 		padding-top: 80px;
 	}
@@ -121,5 +124,10 @@ a {
 
 
 /* testing other css pages */
+
+.down-arrow {
+	width: 100%;
+	text-align: center;
+}
 
 
