@@ -17,7 +17,6 @@
 
   <nav class="navbar navbar-default navbar-fixed-top">
       <ul class="nav-list">
-
           <%= link_to '/sessions/show', :class => "icon-1" do %>
               <li class="fa fa-home fa-5x fa-fw"></li>
               <li class="nav-word">Profile</li>
@@ -46,19 +45,17 @@
   </nav>
 
 
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
+  
+        
         <% if session['auth'] %>
-        <li><a href="/sessions/show">Profile</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+        <a href="/sessions/show"></a>
+        <a href="/auth/logout"></a>
         <% else %>
-        <li><a href="/auth/linkedin">Login via LinkedIn</a></li>
+        <a href="/auth/linkedin">Login via LinkedIn</a>
         <% end %>
-    </ul>
-  </nav>
+   
 
-  <input type="text" placeholder="Search" />
+
 
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
