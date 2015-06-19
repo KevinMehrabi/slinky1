@@ -22,8 +22,10 @@ var x = document.getElementById("demo");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setGeoCookie);
+        console.log("just got geolocation");
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log("can't get geolocation");
     }
 }
 
