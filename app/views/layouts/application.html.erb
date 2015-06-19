@@ -62,7 +62,7 @@
       <%= value %>
     </div>
   <% end %>
-
+<%= params %>
 <%= yield %>
 <p>Hello</p>
 <br />
@@ -118,6 +118,10 @@
 <br />
 <p>Hello</p>
 <br />
+
+<%= @user.inspect %>
+"*****"
+<%= session[:user_id] %>
 
 </body>
 </html>

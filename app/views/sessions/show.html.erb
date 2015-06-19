@@ -6,32 +6,32 @@
 <table>
     <tr>
         <td>Email: </td>
-        <td><%= @auth["email"] %></td>
+        <td><%= @user["email"] %></td>
     </tr>
     <tr>
         <td>Full Name: </td>
-        <td><%= @auth["name"] %></td>
+        <td><%= @user["name"] %></td>
     </tr>
     <tr>
         <td>Profile Picture: </td>
-        <td><img src="<%= @auth["image_url"] %>" width="50" /></td>
+        <td><img src="<%= @user["image_url"] %>" width="50" /></td>
     </tr>
     <tr>
         <td>Link: </td>
-        <td><%= @auth["url"] %></td>
+        <td><%= @user["url"] %></td>
     </tr>
     <tr>
         <td>Country: </td>
         <!-- removing '.upcase' for now from ["country"] because country code is glitchy' -->
-        <td><%= @auth["country"] %></td>
+        <td><%= @user["country"] %></td>
     </tr>
     <tr>
         <td>Region: </td>
-        <td><%= @auth["location"] %></td>
+        <td><%= @user["location"] %></td>
     </tr>
 </table>
 
-<h2>Auth Contains</h2>
+<h2>User Contains</h2>
 <code>
-    <%= @auth.inspect %>
+    <%= @user.inspect %>
 </code>
