@@ -10,8 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body onload="getLocation()">
-
 <script>
 var x = document.getElementById("demo");
 
@@ -28,6 +26,10 @@ function setGeoCookie(position) {
   document.cookie = "lat_lng=" + escape(cookie_val);
 }
 </script>
+
+<body onload="getLocation()">
+
+
 
   <nav class="navbar navbar-default navbar-fixed-top">
       <ul class="nav-list">
