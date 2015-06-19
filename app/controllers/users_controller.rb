@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   before_action :authorized?
   def index
     @users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+      @users = User.all.order('created_at DESC')
+    end
   end
 
   def show
@@ -29,9 +34,6 @@ class UsersController < ApplicationController
   def update
   end
 
-  def self.search(query)
-    where("email like ?", "%#{query}%")
-  end
 
 
   private

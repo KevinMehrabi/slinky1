@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 		    user
 		end
 	end
-	
+
+	def self.search(query)
+  where("email like ?", "%#{query}%")
+	end
+
 
 end

@@ -1,5 +1,12 @@
 <h1 class="span7 text-center">View All Slinky Profiles</h1>
 
+
+<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+ <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+ <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+
 <div class="row span7 text-center">
   <div class="col-md-12"><h2></h2></div>
        <% @users.each do |user| %>
@@ -12,6 +19,6 @@
            <br />
           <div><img src="<%= user.image_url %>" width="100" /></div>
          </div>
-          
+
           <hr>
   	   <% end %>
