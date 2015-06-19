@@ -35,26 +35,31 @@ function signIn() {
 
   <nav class="navbar navbar-default navbar-fixed-top">
       <ul class="nav-list">
-          <span class="icon-1" onclick="sessionsPage()">
-            <li class="fa fa-home fa-5x fa-fw"></li>
-           <li class="nav-word">Profile</li>
-          </span>
+
+          <%= link_to '/sessions/show', :class => "icon-1" do %>
+              <li class="fa fa-home fa-5x fa-fw"></li>
+              <li class="nav-word">Profile</li>
+          <% end %>
+
           <span class="icon-2">
             <li class="fa fa-search fa-5x fa-fw"></li>
             <li class="nav-word">Search</li>
           </span>
+          
           <span class="icon-3">
             <li class="fa fa-book fa-5x fa-fw"></li>
             <li class="nav-word">Contacts</li>
           </span>
-          <span class="icon-4">
-            <li class="fa fa-sign-in fa-5x fa-fw" onclick="signIn()"></li>
-            <li class="nav-word">Sign In</li>
-          </span>
-          <span class="icon-5" onclick="sessionOver">
-            <li class="fa fa-sign-out fa-5x fa-fw"></li>
-            <li class="nav-word">Logout</li>
-          </span>
+
+           <%= link_to "/auth/linkedin", :class => "icon-4" do %>
+              <li class="fa fa-sign-in fa-5x fa-fw"></li>
+              <li class="nav-word">Sign In</li>
+          <% end %>
+
+          <%= link_to "/auth/logout", :class => "icon-5" do %>
+              <li class="fa fa-sign-out fa-5x fa-fw"></li>
+              <li class="nav-word">Logout</li>
+          <% end %>
       </ul>
   </nav>
 
