@@ -3,10 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def action
+  def save_user_location
     @lat_lng = cookies[:lat_lng].split("|")
     @user=@current_user
-    @user.currentlocation=@lat_lng
+    @user.current_location=@lat_lng
+    @user.save
   end
 
   include SessionsHelper

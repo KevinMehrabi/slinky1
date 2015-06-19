@@ -13,7 +13,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.*/
 body {
-	padding-top: 120px;
+	padding-top: 145px;
 }
 
 li {
@@ -58,7 +58,7 @@ a {
 
 @media screen and (max-width: 800px) {
 	body {
-		padding-top: 85px;
+		padding-top: 110px;
 	}
 	li {
 		display: block;
@@ -89,7 +89,7 @@ a {
 }
 @media screen and (max-width: 560px) {
 	body {
-		padding-top: 50px;
+		padding-top: 80px;
 	}
 	li {
 		display: block;
@@ -117,5 +117,9 @@ a {
 		text-align: center;
 
 	}
+}
+
+.heynow {
+	color: red;
 }
 

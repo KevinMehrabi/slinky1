@@ -13,6 +13,8 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to users_new_path
       flash[:success] = "Welcome, #{@user["first_name"]}!"
+      current_user
+      save_user_location
       # Rails.logger @auth
     # rescue
     #   flash[:warning] = "There was an error while trying to authenticate you..."
