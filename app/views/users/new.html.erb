@@ -1,4 +1,4 @@
-<% if current_user %>
+
 
 	<%= form_for @user do |f| %>
 
@@ -19,12 +19,7 @@
 	    <%= f.text_field :state %>
 	</div>
 
-	<%= f.submit "Add new user" %>
+	<%= f.submit "Enter your address" %>
 
 	<% end %>
 
-<% else %> 
-
-	<% link_to root_path %>
-
-<%end%>

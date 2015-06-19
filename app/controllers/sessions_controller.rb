@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     # begin
       @user = User.from_omniauth(request.env['omniauth.auth'])
       session[:user_id] = @user.id
-      redirect_to sessions_show_path
+      redirect_to users_new_path
       flash[:success] = "Welcome, #{@user["first_name"]}!"
       # Rails.logger @auth
     # rescue
