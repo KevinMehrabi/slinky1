@@ -4,10 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def save_user_location
-    @lat_lng = cookies[:lat_lng].split("|")
-    @user=@current_user
-    @user.current_location=@lat_lng
-    @user.save
+    if @lat_lng = cookies[:lat_lng].split("|")
+      @user=@current_user
+      @user.current_location=@lat_lng
+      @user.save
+    else
+      redirect_to users_new_path
+    end
   end
 
   include SessionsHelper
