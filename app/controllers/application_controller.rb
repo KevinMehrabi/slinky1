@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
     if cookies[:lat_lng]
       @lat_lng = cookies[:lat_lng].split("|")
       @user=@current_user
-      @user.current_location=@lat_lng
+      @user.latitude=@lat_lng[0]
+      @user.longitude=@lat_lng[1]
       @user.save
       redirect_to sessions_show_path
     else
