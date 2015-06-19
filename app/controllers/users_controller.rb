@@ -12,11 +12,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to users_path
+    user = User.find_by(id: current_user)
+    if user.current_location
+      redirect_to sessions_show_path
+      flash[:success] = "current_location already exists"
     else
-      render :new
+      user.update_attributes(user_params)
+      redirect_to sessions_show_path
+      flash[:success] = "Location successfully updated."
     end
   end
 
@@ -29,11 +32,11 @@ class UsersController < ApplicationController
   def update
   end
 
-
   private
 
   def user_params
     params.require(:user).permit(:address, :city, :state, :zipcode)
     
   end
+
 end
