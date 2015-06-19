@@ -14,11 +14,13 @@ class User < ActiveRecord::Base
 			user.email = auth_hash["info"]['email']
 			user.username = auth_hash["info"]['nickname']
 			user.location = auth_hash['info']['location']['name']
-			user.country = auth_hash['info']['location']['country']['code']		
-			user.image_url = auth_hash["info"]['image']	
+			user.country = auth_hash['info']['location']['country']['code']
+			user.image_url = auth_hash["info"]['image']
 			user.url = auth_hash['info']['urls']['public_profile']
 		    user.save!
 		    user
 		end
 	end
+	
+
 end

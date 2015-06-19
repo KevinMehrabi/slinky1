@@ -29,11 +29,15 @@ class UsersController < ApplicationController
   def update
   end
 
+  def self.search(query)
+    where("email like ?", "%#{query}%")
+  end
+
 
   private
 
   def user_params
     params.require(:user).permit(:address, :city, :state, :zipcode)
-    
+
   end
 end
