@@ -14,47 +14,9 @@
 
 <body onload="getLocation()">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <ul class="nav-list">
-      <!--  <li class="fa fa-5x fa-fw"> --><%#= link_to( image_tag("slinky-logo.png", size: "200%", :class => "icon-1 fa-fw"), sessions_show_path) %><!-- </li> -->
-              <!-- <li class="fa fa-home fa-5x fa-fw"></li> -->
-              <!-- <li class="nav-word">Profile</li> -->
-          <%= link_to '/sessions/show', :class => "icon-1" do %>
-              <li class="fa fa-bullseye fa-5x fa-fw"></li>
-              <li class="nav-word">SLINKY</li>
-          <% end %>
-
-          <%= link_to '/sessions/show', :class => "icon-1" do %>
-              <li class="fa fa-home fa-5x fa-fw"></li>
-              <li class="nav-word">Profile</li>
-          <% end %>
-
-          <%= link_to "/users/index", :class => "icon-2" do %>
-            <li class="fa fa-search fa-5x fa-fw"></li>
-            <li class="nav-word">Search</li>
-          <% end %>
-
-          <span class="icon-3">
-            <li class="fa fa-book fa-5x fa-fw"></li>
-            <li class="nav-word">Contacts</li>
-          </span>
-          <% if current_user %>
-
-            <%= link_to "/auth/logout", :class => "icon-5" do %>
-                <li class="fa fa-sign-out fa-5x fa-fw"></li>
-                <li class="nav-word">Logout</li>
-            <% end %>
-             
-          <% else %>
-
-          <%= link_to "/auth/linkedin", :class => "icon-4" do %>
-                <li class="fa fa-sign-in fa-5x fa-fw"></li>
-                <li class="nav-word">Sign In</li>
-            <% end %>
-          <% end %>
-      </ul>
-  </nav>
-
+<div class="top_navbar">
+  <%= render "layouts/nav" %>
+</div>
 
   
         
@@ -77,6 +39,44 @@
 
 
 <%= yield %>
+
+
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+<h1>Hello</h1> 
+<br />
+
+
+<div class="bottom_navbar">
+  <%= render "layouts/nav_bottom" %>
+</div>
+
 
 
 <%= @user.inspect %>
