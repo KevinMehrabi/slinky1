@@ -10,66 +10,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-
-
 <body onload="getLocation()">
 
-<div class="top_navbar">
-  <%= render "layouts/nav" %>
-</div>
+  <div class="top_navbar">
+    <%= render "layouts/nav" %>
+  </div>
 
-  
-        
-        <% if session['auth'] %>
-        <a href="/sessions/show"></a>
-        <a href="/auth/logout"></a>
-        <% else %>
-        <a href="/auth/linkedin">Login via LinkedIn</a>
-        <% end %>
-   
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+    <% end %>
 
-
-
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
-<%= params %>
-
+  <%= params %>
 
 <%= yield %>
 
 
-<h1>Hello</h1> 
+<h1>Hi</h1> 
 <br />
 <h1>Hello</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>Whats up</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>Hows it going</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>oh hey</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>YO</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>what</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>who</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>why</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>okay</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>fine</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>whats that</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>nevermind</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>okay</h1> 
 <br />
-<h1>Hello</h1> 
+<h1>later</h1> 
 <br />
 
 
