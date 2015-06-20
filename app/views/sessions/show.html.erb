@@ -1,40 +1,4 @@
 <h1>Sessions#show</h1>
 <p>Find me in app/views/sessions/show.html.erb</p>
 
-<h2>User Data</h2>
 
-<table>
-    <tr>
-        <td>Email: </td>
-        <td><%= @user["email"] %></td>
-    </tr>
-    <tr>
-        <td>Full Name: </td>
-        <td><%= @user["name"] %></td>
-    </tr>
-    <tr>
-        <td>Profile Picture: </td>
-        <td><img src="<%= @user["image_url"] %>" width="50" /></td>
-    </tr>
-    <tr>
-        <td>Link: </td>
-        <td><%= @user["url"] %></td>
-    </tr>
-    <tr>
-        <td>Country: </td>
-        <td><%= @user["country"].upcase %></td>
-    </tr>
-    <tr>
-        <td>Region: </td>
-        <td><%= @user["location"] %></td>
-    </tr>
-    <tr>
-        <td>Occupation: </td>
-        <td><%= @user["description"] %></td>
-    </tr>
-</table>
-
-<h2>User Contains</h2>
-<code>
-    <%= @user.inspect %>
-</code>
