@@ -33,12 +33,6 @@ gem 'geocoder'
 
 gem 'omniauth-linkedin-oauth2'
 
-ruby '2.1.5'
-
-group :production do
-gem 'rails_12factor'
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -58,4 +52,10 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+ruby '2.1.5'
+
+group :production do
+	gem 'rails_12factor'
 end
