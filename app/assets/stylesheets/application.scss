@@ -14,11 +14,12 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@media screen and (min-width: 801px) {
-	body {
-		padding-top: 145px;
-	}
 
+/* if the screen is greater than 561px, run this CSS below */
+@media screen and (min-width: 561px) {
+	body {
+		padding-top: 110px;
+	}
 	li {
 		display: block;
 		margin: 0 auto;
@@ -27,49 +28,8 @@
 		text-decoration: none;
 		display: block;	
 	}
-	.nav-word {
-		list-style-type: none;
-		color: black;
-		font-size: 2em;
-		text-align: center;	
-	}
-
-	.nav-list {
-		background-color: #ffffff;
-		width: 100%;
-		list-style-type: none;
-		display: inline-block;
-		text-align: center;
-		padding: 0px;	
-	}
-	.icon-1, .icon-2, .icon-3, .icon-4, .icon-5 {
-		display: inline-block;
-		text-align: center;
-		padding: 5px;
-		width: 19.5%;
-		border: 3px solid black;
-		color: black;
-	}
-	.icon-1:hover, .icon-2:hover, .icon-3:hover, .icon-4:hover, .icon-5:hover {
-		color: #63B8FF;
-		text-decoration: none;
-	}
-		
-	.authenticate-btn {
-		width: 30%;
-	}
-	.bottom_navbar {
-		display: none;
-	}
-}
-
-@media screen and (min-width: 561px) {
-	body {
-		padding-top: 110px;
-	}
-	li {
-		display: block;
-		margin: 0 auto;
+	ul {
+		-webkit-padding-start: 0px;
 	}
     .icon-1, .icon-2, .icon-3, .icon-4, .icon-5 {
         display: inline-block;
@@ -90,6 +50,7 @@
 		list-style-type: none;
 		display: inline-block;
 		text-align: center;
+		padding: 0px;
 	
 	}
 	.nav-word {
@@ -98,14 +59,12 @@
 		font-size: 1.5em;
 		text-align: center;
 	}
-	ul {
-		-webkit-padding-start: 0px;
-	}
-	
 	.bottom_navbar {
 		display: none;
 	}
 }
+
+/* If the screen is less than 560px, run this CSS below */
 @media screen and (max-width: 560px) {
 	p {
 		margin: 0 0 50px;
@@ -116,6 +75,9 @@
 	li {
 		display: block;
 		margin: 0 auto;
+	}
+	ul {
+		-webkit-padding-start: 0px;
 	}
     .icon-1, .icon-2, .icon-3, .icon-4, .icon-5 {
         display: inline-block;
@@ -145,15 +107,8 @@
 		text-align: center;
 
 	}
-
-	ul {
-		-webkit-padding-start: 0px;
-	}
 	.top_navbar {
 		display: none;
-	}
-	.bottom_navbar {
-		display: visible !important;
 	}
 }
 
