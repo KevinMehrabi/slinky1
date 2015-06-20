@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 			user.name = auth_hash["info"]['name']
 			user.first_name = auth_hash["info"]['first_name']
 			user.last_name = auth_hash["info"]['last_name']
+			user.description = auth_hash["info"]['description']
 			user.email = auth_hash["info"]['email']
 			user.username = auth_hash["info"]['nickname']
 			user.location = auth_hash['info']['location']['name']
@@ -23,7 +24,7 @@ class User < ActiveRecord::Base
 	end
 
 	def self.search(query)
-  where("name like ?", "%#{query}%")
+  		where("description like ?", "%#{query}%")
 	end
 
 

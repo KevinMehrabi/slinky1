@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.where(id: session[:user_id])[0]
+    redirect_to root_path unless session[:user_id]
   end
 
   def new
