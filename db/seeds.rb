@@ -12,14 +12,14 @@ users = User.create ([  {provider: "linkedin", uid: "95evirp5qy", name: "Megan K
                         url: "https://www.linkedin.com/pub/megan-kakitsubo/65/344/62b", created_at: "2015-06-19 17:59:55", updated_at: "2015-06-19 18:04:40",
                         email: "megankaki@gmail.com", username: "Megan Kakitsubo", first_name: "Megan", last_name: "Kakitsubo", country: "us",
                         latitude: '34.0131295', longitude: '-118.49516549999998', address: nil, city: nil, state: nil, zipcode: nil,
-                        current_location: "['34.0131295', '-118.49516549999998']" },
+                        current_location: "['34.0131295', '-118.49516549999998']", description: "Web Development Immersive | Web Developer at General Assembly" },
 
                         {provider: "linkedin", uid: "a6Lnixk4BC", name: "Daley Meistrell", location: "Greater Los Angeles Area",
                         image_url: "https://media.licdn.com/mpr/mprx/0_N-oHBQTmFXd7gIjpN9sUBX12F3f00eyp9zOBBXGO4bRfh2wy4qVXJknrd27hy7grvAH9Z_y6U3Py",
                         url: "https://www.linkedin.com/pub/daley-meistrell/50/307/11a",
                         created_at: "2015-06-18 16:08:26", updated_at: "2015-06-19 17:29:44", email: "daley@bodyglove.com", username: "Daley Meistrell",
                         first_name: "Daley", last_name: "Meistrell", country: "us", latitude: '34.0131608', longitude: '-118.4951012', address: nil, city: nil, state: nil, zipcode: nil,
-                        current_location: "[\"34.0131608\", \"-118.4951012\"]"},
+                        current_location: "[\"34.0131608\", \"-118.4951012\"]", description: "Marketing Coordinator at Body Glove International" },
 
 
                         {provider: "linkedin", uid: "0hNQeZTxeX", name: "Kevin Mehrabi", location: "Greater Los Angeles Area",
@@ -27,6 +27,6 @@ users = User.create ([  {provider: "linkedin", uid: "95evirp5qy", name: "Megan K
                         url: "https://www.linkedin.com/in/kmehrabi",
                         created_at: "2015-06-19 17:09:36", updated_at: "2015-06-19 18:47:19", email: "Kevin.Mehrabi@gmail.com", username: "Kevin Mehrabi",
                         first_name: "Kevin", last_name: "Mehrabi", country: "us", latitude: '34.0131714', longitude: '-118.49512530000001', address: nil, city: nil, state: nil, zipcode: nil,
-                        current_location: "[\"34.0131714\", \"-118.49512530000001\"]"},
+                        current_location: "[\"34.0131714\", \"-118.49512530000001\"]", description: "Product Manager at Runner (Crowdshipping, Inc.) | UCLA MBA"},
 
                       ])
