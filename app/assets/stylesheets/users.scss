@@ -1,6 +1,15 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*index background set to white, on hover background changes to light grey to highlight and show separation of profiles to avoid confusion*/
+.index-background {
+  background-color: #ffffff;
+}
+.index-background:hover {
+  background-color: #F8F8F8;
+}
+
 .down-arrow {
 	width: 100%;
 	text-align: center;
@@ -216,12 +225,4 @@
   	padding-bottom: 9px;
     opacity: 1;
   }
-}
-
-/*index show separation boxes*/
-.index-background {
-  background-color: #ffffff;
-}
-.index-background:hover {
-  background-color: #F8F8F8;
 }
