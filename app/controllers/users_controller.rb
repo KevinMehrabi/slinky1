@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     if params[:search]
-      @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], 10).order("created_at DESC")
+      @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC")
     else
       @users = User.all.order('created_at DESC')
     end
