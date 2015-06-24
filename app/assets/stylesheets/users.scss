@@ -19,6 +19,10 @@
 	-o-animation: bounce 1000ms ease-out;
 	animation: bounce 1000ms ease-out;
 }
+.hide-show {
+  display: inline-block;
+  text-align: center;
+}
 
 @-webkit-keyframes bounce {
   0% {
