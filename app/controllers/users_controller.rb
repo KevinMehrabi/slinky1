@@ -2,14 +2,11 @@ class UsersController < ApplicationController
   before_action :authorized?
   def index
     if !params[:search].empty? && !params[:miles].empty?
-      Rails.logger.debug "differentstring"
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC").page(params[:page])
     elsif !params[:search].empty? || params[:miles].empty?
-      Rails.logger.debug "differentstring"
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], 1000000000).order("created_at DESC").page(params[:page])
     else
       @users = User.all.order('created_at DESC')
-      Rails.logger.debug "mystring"
     end
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
