@@ -36,22 +36,14 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 
 <% end %>
 
+<tbody class="page">
+    <%= render @users %>
+  </tbody>
+</table>
 
-<div class="row span7 text-center">
-  <div class="col-md-12"><h2></h2></div>
-       <% @users.each do |user| %>
-       <div class="index-background">
-          <div class="col-md-12"><h3>Name: <%= user.name %></h3></div>
-          <div class="col-md-12">Email: <%= user.email %></div>
-          <div class="col-md-12">Linkedin Profile: <%= user.url %></div>
-          <div class="col-md-12">Country: <%= user.country %></div>
-          <div class="col-md-12">Location: <%= user.location %></div>
-          <div class="col-md-12">Current Latutiude: <%= user.latitude %></div>
-          <div class="col-md-12">Current Longitude: <%= user.longitude %></div>
-          <div class="col-md-12">Description: <%= user.description %></div>
 
-           <br />
-          <div><img src="<%= user.image_url %>" width="100" /></div>
-         </div>
-       <% end %>
-  </div>
+<%#= paginate @users %>
+
+
+
+
