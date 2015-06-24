@@ -3,17 +3,36 @@
 
 <h1 class="span7 text-center">View All Slinky Profiles</h1>
 
-  <div id="map">
-	<script type="text/javascript" class="google-map">
-	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-	  handler.bounds.extendWith(markers);
-	  handler.fitMapToBounds();
-	});
-	</script>
-</div>
-
+  <div class="wrapper">
+	  <div class="map" id="map"></div>
+		<script type="text/javascript" class="google-map">
+		handler = Gmaps.build('Google');
+		handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+		  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+		  handler.bounds.extendWith(markers);
+		  handler.fitMapToBounds();
+		});
+		</script>
+		<i class="top"></i>
+    <i class="right"></i>
+    <i class="bottom"></i>
+    <i class="left"></i>
+    <i class="top left"></i>
+    <i class="top right"></i>
+    <i class="bottom left"></i>
+    <i class="bottom right"></i>
+ </div>
+<!-- <div class="wrapper">
+    <div class="map" id="map"></div>
+    <i class="top"></i>
+    <i class="right"></i>
+    <i class="bottom"></i>
+    <i class="left"></i>
+    <i class="top left"></i>
+    <i class="top right"></i>
+    <i class="bottom left"></i>
+    <i class="bottom right"></i>
+</div> -->
 
 
 
