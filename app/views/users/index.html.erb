@@ -1,5 +1,9 @@
 <h1 class="span7 text-center">View All Slinky Profiles</h1>
 
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
 
 <%= form_tag(users_path, :method => "get", id: "search-form") do %>
  <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>

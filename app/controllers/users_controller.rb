@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authorized?
   def index
     @users = User.all
-    if params[:search]
+    if params[:search] && params[:one].present? 
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC")
     else
       @users = User.all.order('created_at DESC')
