@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :authorized?
+
+  
   def index
-    @users = User.all
     if params[:search] && params[:one].present? 
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC").page(params[:page])
     else
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: current_user)
     if user.current_location
       redirect_to sessions_show_path
-      flash[:success] = "current_location already exists"
+      flash[:success] = "Current location already exists"
     else
       user.update_attributes(user_params)
       redirect_to sessions_show_path
