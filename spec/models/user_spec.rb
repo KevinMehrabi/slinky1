@@ -8,8 +8,16 @@ end
 RSpec.describe User, type: :model do
 
     describe "users" do
+        # Fields come from the factory file
+        it 'should have a defaulted full name field' do
+            user = FactoryGirl.build(:user)
+            print user
+            expect(user.name).to eq "Joe Random"
+        end
+    end
+    describe "users" do
     	# Fields come from the factory file
-        it 'should have a defaulted first_name field' do
+        it 'should have a defaulted first name field' do
             user = FactoryGirl.build(:user)
             print user
             expect(user.first_name).to eq "Joe"
@@ -17,7 +25,7 @@ RSpec.describe User, type: :model do
     end
     describe "users" do
         # Fields come from the factory file
-        it 'should have a defaulted last_name field' do
+        it 'should have a defaulted last name field' do
             user = FactoryGirl.build(:user)
             print user
             expect(user.last_name).to eq "Random"
@@ -87,6 +95,38 @@ RSpec.describe User, type: :model do
             expect(user.url).to eq "https://www.linkedin.com/pub/random"
         end
     end
+    describe "users" do
+        # Fields come from the factory file
+        it 'should have a zipcode field if user lacks latitude and longitude' do
+            user = FactoryGirl.build(:user)
+            print user
+            expect(user.zipcode).to eq "90024"
+        end
+    end
+    describe "users" do
+        # Fields come from the factory file
+        it 'should have a city field if user lacks latitude and longitude' do
+            user = FactoryGirl.build(:user)
+            print user
+            expect(user.city).to eq "Los Angeles"
+        end
+    end
+    describe "users" do
+        # Fields come from the factory file
+        it 'should have a state field if user lacks latitude and longitude' do
+            user = FactoryGirl.build(:user)
+            print user
+            expect(user.state).to eq "California"
+        end
+    end
+    describe "users" do
+        # Fields come from the factory file
+        it 'should have an address field if user lacks latitude and longitude' do
+            user = FactoryGirl.build(:user)
+            print user
+            expect(user.address).to eq "123 Fun Street"
+        end
+    end
 
     describe "#full_address" do
     	it "should return address seperated by comma" do
@@ -94,6 +134,13 @@ RSpec.describe User, type: :model do
     		print user
     		expect(user.full_address).to eq "483 Gayley Avenue, Los Angeles, CA, 90024"
     	end
+    end
+
+    describe ".self.search" do
+        it "should return searh result of description" do
+            user = User.create(description: "web")
+            expect(User.search("web")).to include(user)
+        end
     end
 
 

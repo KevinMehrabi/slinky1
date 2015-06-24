@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :user do
+    name "Joe Random"
     first_name "Joe"
     last_name "Random"
     email "joe@random.com"
@@ -10,5 +11,9 @@ FactoryGirl.define do
     image_url "https://media.licdn.com/blah/blah"
     country "us"
     url "https://www.linkedin.com/pub/random"
+    zipcode 90024
+    city "Los Angeles"
+    state "California"
+    address "123 Fun Street"
   end
 end
