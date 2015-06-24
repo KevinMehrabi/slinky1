@@ -1,8 +1,8 @@
 
-<div class="row span7 text-center users" id="users">
+<div class="row span7 text-center users page" id="users page">
   <div class="col-md-12"><h2></h2></div>
-       <% @users %>
-       <div class="index-background">
+       
+       <div class="index-background users page" id="users page">
           <div class="col-md-12"><h3>Name: <%= user.name %></h3></div>
           <div class="col-md-12">Email: <%= user.email %></div>
           <div class="col-md-12">Linkedin Profile: <%= user.url %></div>
@@ -15,9 +15,8 @@
            <br />
           <div><img src="<%= user.image_url %>" width="100" /></div>
          </div>
-       <%# end %>
   </div>
 <br />
-  
+
 
   
