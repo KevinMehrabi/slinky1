@@ -11,10 +11,12 @@
 	<% end %>
 
 	<br />
-	<button class="hide-show" id="hide">Hide Map</button>
+	<div class="hide-show" id="hide">Hide Map</div>
 	<br />
-	<button class="hide-show" id="show">Show Map</button>
-
+	<div class="hide-show" id="show">Show Map</div>
+	<br />
+	<div class="show-profiles-button"><a class="jumper" href="#jump">User List</a></div>
+	<br />
 
 
 <div class="wrapper" id="hide show">
@@ -38,13 +40,29 @@
 			});
 		</script>
 
+		<script>
+			$(document).ready(function() {
+			$(".jumper").on("click", function( e ) {
+
+			e.preventDefault();
+
+			$("body, html").animate({ 
+			scrollTop: $( $(this).attr('href') ).offset().top 
+			}, 600);
+
+			});
+			});
+		</script>
+
 </div>
+<br />
 
 
-
-<tbody class="page">
-    <%= render @users %>
-</tbody>
+<div id="jump">
+	<tbody class="page">	
+	    	<%= render @users %>
+	</tbody>
+</div>
 
 
 
