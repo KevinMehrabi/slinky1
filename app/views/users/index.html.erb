@@ -5,9 +5,9 @@
 <h3 class="span7 text-center">Search Users</h1>
 
 	<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-		<%= text_field_tag :search, params[:search], placeholder: "Search Users", id: "search-users" %>
-		<%= text_field_tag :miles, params[:miles], placeholder: "Miles", id: "search-miles" %>
-		<%= submit_tag "Search", id: "search-submit" %>
+		<%= text_field_tag :search, params[:search], placeholder: "Industry", id: "search-users", :required => true %>
+		<%= text_field_tag :miles, params[:miles], placeholder: "Miles", id: "search-miles", :required => true %>
+		<%= submit_tag "Search", id: "search-submit", value: "Go" %>
 	<% end %>
 
 	<br />
