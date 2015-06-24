@@ -3,51 +3,38 @@
 
 <h1 class="span7 text-center">View All Slinky Profiles</h1>
 
-  <div class="wrapper">
-	  <div class="map" id="map"></div>
+	<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+		<%= text_field_tag :search, params[:search], placeholder: "Search Users", id: "search-users" %>
+		<%= text_field_tag :miles, params[:miles], placeholder: "Miles", id: "search-miles" %>
+		<%= submit_tag "Search", id: "search-submit" %>
+	<% end %>
+
+
+<div class="wrapper">
+	<div class="map" id="map"></div>
 		<script type="text/javascript" class="google-map">
 		handler = Gmaps.build('Google');
 		handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-		  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-		  handler.bounds.extendWith(markers);
-		  handler.fitMapToBounds();
+		markers = handler.addMarkers(<%=raw @hash.to_json %>);
+		handler.bounds.extendWith(markers);
+		handler.fitMapToBounds();
 		});
 		</script>
-		<i class="top"></i>
-    <i class="right"></i>
-    <i class="bottom"></i>
-    <i class="left"></i>
-    <i class="top left"></i>
-    <i class="top right"></i>
-    <i class="bottom left"></i>
-    <i class="bottom right"></i>
- </div>
-<!-- <div class="wrapper">
-    <div class="map" id="map"></div>
-    <i class="top"></i>
-    <i class="right"></i>
-    <i class="bottom"></i>
-    <i class="left"></i>
-    <i class="top left"></i>
-    <i class="top right"></i>
-    <i class="bottom left"></i>
-    <i class="bottom right"></i>
-</div> -->
+	<i class="top"></i>
+	<i class="right"></i>
+	<i class="bottom"></i>
+	<i class="left"></i>
+	<i class="top left"></i>
+	<i class="top right"></i>
+	<i class="bottom left"></i>
+	<i class="bottom right"></i>
+</div>
 
-
-
-<%= form_tag(users_path, :method => "get", id: "search-form") do %>
- <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
- <%= text_field_tag :miles, params[:miles], placeholder: "Miles" %>
-
- <%= submit_tag "Search" %>
-
-<% end %>
 
 <tbody class="page">
     <%= render @users %>
-  </tbody>
-</table>
+</tbody>
+
 
 
 
