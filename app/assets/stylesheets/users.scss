@@ -19,6 +19,11 @@
 	-o-animation: bounce 1000ms ease-out;
 	animation: bounce 1000ms ease-out;
 }
+#map {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
 
 @-webkit-keyframes bounce {
   0% {
