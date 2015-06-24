@@ -17,6 +17,9 @@
 
 /* if the screen is greater than 561px, run this CSS below */
 @media screen and (min-width: 561px) {
+	a {
+		color: black !important;
+	}
 	body {
 		padding-top: 110px;
 	}

@@ -3,10 +3,19 @@ class UsersController < ApplicationController
 
   
   def index
+<<<<<<< HEAD
     if params[:search] && params[:one].present? 
+=======
+    @users = User.all
+    if params[:search] && params[:one].present?
+>>>>>>> 3384d16430b5b760d1129738b6aa936d79c7d883
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC").page(params[:page])
     else
       @users = User.all.order('created_at DESC')
+    end
+    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
     end
   end
 
