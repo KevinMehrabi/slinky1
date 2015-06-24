@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :authorized?
-
   def index
-    if params[:search] && params[:one].present? 
+    if !params[:search].empty? && !params[:miles].empty?
+      Rails.logger.debug "differentstring"
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC").page(params[:page])
     else
       @users = User.all.order('created_at DESC')
+      Rails.logger.debug "mystring"
     end
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: current_user)
     if user.current_location
       redirect_to sessions_show_path
-      flash[:success] = "Current location already exists"
+      flash[:success] = "current_location already exists"
     else
       user.update_attributes(user_params)
       redirect_to sessions_show_path
