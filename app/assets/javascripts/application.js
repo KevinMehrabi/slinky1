@@ -13,9 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.infinitescroll
-//= require_tree .
+// = require_tree .
 
 
 var x = document.getElementById("demo");
