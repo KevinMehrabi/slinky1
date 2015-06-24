@@ -14,9 +14,7 @@
 
 	<div id="button-container">
 		<span class="hide-show" id="hide">Hide Map</span>
-		
 		<span class="hide-show" id="show">Show Map</span>
-		
 		<span class="show-profiles-button jumper" href="#jump">User List</span>
 	</div>
 
@@ -36,11 +34,12 @@
 		});
 		</script>
 
-		<script>
+		<script id="button-hide">
 			$("#hide").click(function(){
 			$("#map").hide();
 			});
-
+		</script>
+		<script id="button-show">
 			$("#show").click(function(){
 			$("#map").show();
 			});
