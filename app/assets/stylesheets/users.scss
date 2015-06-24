@@ -20,8 +20,17 @@
 	animation: bounce 1000ms ease-out;
 }
 .hide-show {
-  display: inline-block;
-  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+  padding: 2px;
+}
+.hide-show:hover {
+  //background-color: #63B8FF;
+  color: #63B8FF;
+  border: 2px solid #63B8FF;
 }
 
 @-webkit-keyframes bounce {
