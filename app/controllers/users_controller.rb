@@ -2,10 +2,14 @@ class UsersController < ApplicationController
   before_action :authorized?
   def index
     @users = User.all
-    if params[:search] && params[:one].present? 
+    if params[:search] && params[:one].present?
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC")
     else
       @users = User.all.order('created_at DESC')
+    end
+    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
     end
   end
 
