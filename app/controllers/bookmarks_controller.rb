@@ -24,15 +24,13 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.json
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-
-    respond_to do |format|
+    @bookmark = current_user.bookmarks.build(:bookmark_id => params[:bookmark_id])
       if @bookmark.save
-        format.html { redirect_to @bookmark, notice: 'Bookmark was successfully created.' }
-        format.json { render :show, status: :created, location: @bookmark }
+        flash[:notice] = "Added bookmark."
+        redirect_to root_url
       else
-        format.html { render :new }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+        flash[:error] = "Unable to add bookmark."
+        redirect_to root_url
       end
     end
   end
@@ -71,4 +69,3 @@ class BookmarksController < ApplicationController
     def bookmark_params
       params.require(:bookmark).permit(:user_id, :bookmark_id, :create, :destroy)
     end
-end
