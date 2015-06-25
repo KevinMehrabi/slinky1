@@ -30,8 +30,13 @@
         <td>Occupation: </td>
         <td><%= @user["description"] %></td>
     </tr>
-</table> 
-   
+    <tr>
+        <td> <%= link_to "Add Bookmark", bookmarks_path(bookmark_id), :method => :post %> </td>
+
+    </tr>
+
+</table>
+
 
 
 <h2>User Contains</h2>
