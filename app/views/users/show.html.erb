@@ -1,19 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<h2>User Data</h2>
+<h2 class="span7 text-center">Welcome to Slinky, <%= @user["name"] %></h2>
 
-<table>
+<table class="table">
     <tr>
-        <td>Email: </td>
-        <td><%= @user["email"] %></td>
+        <td>Profile Picture: </td>
+        <td><img src="<%= @user["image_url"] %>" width="50" /></td>
     </tr>
     <tr>
         <td>Full Name: </td>
         <td><%= @user["name"] %></td>
     </tr>
     <tr>
-        <td>Profile Picture: </td>
-        <td><img src="<%= @user["image_url"] %>" width="50" /></td>
+        <td>Email: </td>
+        <td><%= @user["email"] %></td>
     </tr>
     <tr>
         <td>Link: </td>
@@ -31,7 +29,8 @@
         <td>Occupation: </td>
         <td><%= @user["description"] %></td>
     </tr>
-</table>
+</table> 
+
 
 <h2>User Contains</h2>
 <code>
