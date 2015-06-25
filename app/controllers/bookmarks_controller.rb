@@ -26,10 +26,10 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.build(:mark_id => params[:mark_id])
       if @bookmark.save
-        flash[:notice] = "Added friend."
+        flash[:notice] = "Added bookmark."
         redirect_to root_url
       else
-        flash[:error] = "Unable to add friend."
+        flash[:error] = "Unable to add bookmark."
         redirect_to root_url
       end
     end
@@ -51,12 +51,12 @@ class BookmarksController < ApplicationController
 
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.json
+
   def destroy
+    @bookmark = current_user.bookmarks.find(params[:id])
     @bookmark.destroy
-    respond_to do |format|
-      format.html { redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice] = "Removed bookmark."
+    redirect_to current_user
   end
 
   private
