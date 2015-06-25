@@ -33,11 +33,11 @@ class UsersController < ApplicationController
   def create
     user = User.find_by(id: current_user)
     if user.current_location
-      redirect_to sessions_show_path
+      redirect_to users_edit_path
       flash[:success] = "current_location already exists"
     else
       user.update_attributes(user_params)
-      redirect_to sessions_show_path
+      redirect_to users_edit_path
       flash[:success] = "Location successfully updated."
     end
   end
@@ -50,6 +50,14 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find_by(id: session[:user_id])
+
+      if @user.update_attributes(user_params)
+        flash[:notice] = "Address successfully updated."
+        redirect_to users_edit_path
+      else 
+        render users_edit_path
+      end
   end
 
   private
