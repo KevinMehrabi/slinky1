@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
+	searchkick word_middle: [:name, :description]
 	paginates_per 5
 	geocoded_by :full_address
 	after_validation :geocode
 
-	
 	def full_address
 	  [address, city, state, zipcode].join(', ')
 	end

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if !params[:search].blank? && !params[:miles].blank?
       @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], params[:miles]).order("created_at DESC").page(params[:page])
     elsif !params[:search].blank? || params[:miles].blank?
-      @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], 1000000000).order("created_at DESC").page(params[:page])
+      @users = User.search(params[:search]).near([current_user.latitude, current_user.longitude], 1000000000).order("created_at DESC").page(params[:page]) 
     else
       @users = User.all.order('created_at DESC')
     end
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
       if @user.update_attributes(user_params)
         flash[:notice] = "Address successfully updated."
         redirect_to users_edit_path
-      else 
+      else
         render users_edit_path
       end
   end
