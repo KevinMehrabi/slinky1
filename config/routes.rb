@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'bookmarks/create'
+
+  get 'bookmarks/destroy'
+
+  get 'bookmark/user_id:integer'
+
+  get 'bookmark/bookmark_id:integer'
+
+  get 'bookmark/create'
+
+  get 'bookmark/destroy'
+
   get 'users/index'
 
   get 'users/show'
