@@ -21,12 +21,16 @@ RSpec.describe UsersController, type: :controller do
       end
   end
 
-  # describe "GET #show" do
-  #   it "returns http success" do
-  #     get :show
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+  describe "GET #show" do
+    before do 
+      get :index, format: :json, id: 1
+    end
+    context 'one listing' do 
+      it 'returns one listing' do 
+        expect(@user2.first_name).to eq("Joe")
+      end
+    end
+  end
 
   # describe "GET #new" do
   #   it "returns http success" do
