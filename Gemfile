@@ -43,6 +43,8 @@ gem 'gmaps4rails'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+gem 'nifty-generators'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
