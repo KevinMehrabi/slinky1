@@ -1,6 +1,7 @@
 <h2 class="span7 text-center">Welcome to Slinky, <%= @user["name"] %></h2>
 
 <table class="table">
+
     <tr>
         <td>Profile Picture: </td>
         <td><img src="<%= @user["image_url"] %>" width="50" /></td>
@@ -30,6 +31,27 @@
         <td><%= @user["description"] %></td>
     </tr>
 </table> 
+   <br />
+<div class="edit-address">Edit Current Location:</div>
+    <%= form_for @user do |f| %>
+        <div class="edit-address">
+            <div class="edit-address">
+                <%= f.text_field :address, placeholder: "Address" %>
+            </div>
+            <div class="edit-address">
+                <%= f.text_field :city, placeholder: "City" %>
+            </div>
+            <div class="edit-address">
+                <%= f.text_field :zipcode, placeholder: "Zipcode" %>
+            </div>
+            <div class="edit-address">
+                <%= f.text_field :state, placeholder: "State" %>
+            </div>
+            <div class="edit-address">
+            <%= f.submit "Update Address" %>
+            </div>
+            <% end %>
+        </div>
 
 
 <h2>User Contains</h2>
