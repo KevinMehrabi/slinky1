@@ -24,12 +24,21 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.json
   def create
+
     @bookmark = current_user.bookmarks.build(:bookmark_id)
     if @bookmark.save
       flash[:notice] = "Added bookmark."
       redirect_to root_url
     else
       render :action => "Unable to add bookmark"
+    @bookmark = current_user.bookmarks.build(:bookmark_id => params[:bookmark_id])
+      if @bookmark.save
+        flash[:notice] = "Added bookmark."
+        redirect_to root_url
+      else
+        flash[:error] = "Unable to add bookmark."
+        redirect_to root_url
+      end
     end
   end
 
@@ -67,4 +76,3 @@ class BookmarksController < ApplicationController
     def bookmark_params
       params.require(:bookmark).permit(:user_id, :bookmark_id, :create, :destroy)
     end
-end
