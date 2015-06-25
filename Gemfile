@@ -40,9 +40,6 @@ gem 'omniauth-linkedin-oauth2'
 
 gem 'gmaps4rails'
 
-gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-
 gem 'nifty-generators'
 
 # Use ActiveModel has_secure_password
