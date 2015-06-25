@@ -4,26 +4,41 @@ RSpec.describe UsersController, type: :controller do
   render_views
   let(:json) { JSON.parse(response.body) }
 
-
-  describe "GET #index" do
-    before do 
-      get :index, format: :json
-
+  before do
       @user = FactoryGirl.create(:user)
       @user2 = FactoryGirl.create(:user2)
       @users = User.all
-    end 
-    context 'all users' do 
-        it 'returns the users' do
-          expect(@users).to include(@user, @user2)
-        end
-      end
   end
 
+  describe "GET /users.json" do
+    before do 
+      get :index, format: :json
+    end 
+ 
+    context 'all users' do 
+      it 'returns the user names' do
+        expect(json.collect{|l| l["name"]}).to include(@user.name, @user2.name)
+      end
+    end
+
+    context 'users post search' do 
+       before do 
+        get :index, format: :json, search: "web"
+      end
+      it 'returns the user occupation with "web"' do
+        expect(json.collect{|l| l["description"]}).to include("web")
+      end
+  end
+end
+
   # describe "GET #show" do
-  #   it "returns http success" do
-  #     get :show
-  #     expect(response).to have_http_status(:success)
+  #   before do 
+  #     get :index, format: :json, id: 1
+  #   end
+  #   context 'one listing' do 
+  #     it 'returns one listing' do 
+  #       expect(@user.id).to eq(1)
+  #     end
   #   end
   # end
 

@@ -6,7 +6,7 @@ FactoryGirl.define do
     email "joe@random.com"
     latitude 34
     longitude 74
-    description "blah blah"
+    description "web developer"
     provider "linkedin"
     image_url "https://media.licdn.com/blah/blah"
     country "us"
@@ -18,6 +18,7 @@ FactoryGirl.define do
     
     factory :user2 do
         name "Sue Random"
+        description "chemical engineer"
     end
   end
 end
