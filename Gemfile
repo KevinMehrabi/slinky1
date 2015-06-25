@@ -38,6 +38,8 @@ gem 'omniauth-linkedin-oauth2'
 
 gem 'gmaps4rails'
 
+gem 'searchkick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
