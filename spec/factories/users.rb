@@ -15,5 +15,9 @@ FactoryGirl.define do
     city "Los Angeles"
     state "California"
     address "123 Fun Street"
+    
+    factory :user2 do
+        name "Sue Random"
+    end
   end
 end

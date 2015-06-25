@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     else
       @users = User.all.order('created_at DESC')
     end
+    respond_to do |format|
+      format.html
+      format.json { render json: @users }
+    end
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
@@ -17,6 +21,10 @@ class UsersController < ApplicationController
   def show
     @user = User.where(id: session[:user_id])[0]
     redirect_to root_path unless session[:user_id]
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def new
