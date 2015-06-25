@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       @user.latitude=@lat_lng[0]
       @user.longitude=@lat_lng[1]
       @user.save
-      redirect_to users_show_path
+      redirect_to users_index_path
     else
       redirect_to users_new_path
     end
