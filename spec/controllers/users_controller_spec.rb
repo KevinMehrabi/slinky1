@@ -4,14 +4,15 @@ RSpec.describe UsersController, type: :controller do
   render_views
   let(:json) { JSON.parse(response.body) }
 
+  before do
+      @user = FactoryGirl.create(:user)
+      @user2 = FactoryGirl.create(:user2)
+      @users = User.all
+  end
 
   describe "GET #index" do
     before do 
       get :index, format: :json
-
-      @user = FactoryGirl.create(:user)
-      @user2 = FactoryGirl.create(:user2)
-      @users = User.all
     end 
     context 'all users' do 
         it 'returns the users' do
