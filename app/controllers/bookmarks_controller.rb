@@ -24,15 +24,13 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.json
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-
-    respond_to do |format|
+    @bookmark = current_user.bookmarks.build(:mark_id => params[:mark_id])
       if @bookmark.save
-        format.html { redirect_to @bookmark, notice: 'Bookmark was successfully created.' }
-        format.json { render :show, status: :created, location: @bookmark }
+        flash[:notice] = "Added friend."
+        redirect_to root_url
       else
-        format.html { render :new }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+        flash[:error] = "Unable to add friend."
+        redirect_to root_url
       end
     end
   end
