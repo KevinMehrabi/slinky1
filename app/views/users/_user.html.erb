@@ -6,7 +6,7 @@
           <div class="col-md-12"><h3>Name: <%= user.name %></h3></div>
           <div class="col-md-12">Location: <%= user.location %></div>
           <div class="col-md-12">Description: <%= user.description %></div>
-          <div class="col-md-12"><%= link_to "Contact this Professional", user_path(user.id) %></div>
+          <div class="col-md-12"><%= link_to "Contact this Professional", user_path(user.id), id: "profile-link" %></div>
 
            <br />
           <div><img src="<%= user.image_url %>" width="100" /></div>
