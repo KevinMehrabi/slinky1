@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   get 'bookmarks/destroy'
 
-  get 'bookmark/user_id:integer'
+  # get 'bookmark/user_id'
 
-  get 'bookmark/bookmark_id:integer'
+  # get 'bookmark/bookmark_id'
 
   get 'bookmark/create'
 
