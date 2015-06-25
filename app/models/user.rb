@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 	paginates_per 5
 	geocoded_by :full_address
 	after_validation :geocode
+	include Elasticsearch::Model
+	include Elasticsearch::Model::Callbacks
 
 	def full_address
 	  [address, city, state, zipcode].join(', ')

@@ -40,7 +40,8 @@ gem 'omniauth-linkedin-oauth2'
 
 gem 'gmaps4rails'
 
-gem 'searchkick'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
