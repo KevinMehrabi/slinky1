@@ -16,7 +16,14 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-
+# spec_helper.rb
+require 'rubygems'
+ 
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+  ENV["RAILS_ENV"] ||= 'test'
+  require File.expand_path("../../config/environment", __FILE__)
+  require 'rspec/rails'
+  require 'rspec/autorun'
   OmniAuth.config.test_mode = true
     omniauth_hash = { 'provider' => 'linkedin',
                        'uid' => '95evirp5qy',
