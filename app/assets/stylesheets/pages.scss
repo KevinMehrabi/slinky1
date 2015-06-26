@@ -1,13 +1,29 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*h1, h2, h3 {
+	text-shadow: 2px 2px #999;
+}*/
+
 .about-h1 {
+	color: #333333;
 	text-align: center;
+	text-shadow: 1px 1px white;
 	margin: 0;
 }
 .top-about {
-	background-color: rgba(153, 153, 153, 0.15);
-	padding: 50px;
+	/*background-color: rgba(153, 153, 153, 0.15);*/
+	background: url("pen.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 100px;
+
+	/*padding: 50px;*/
+}
+.top-about:hover {
+
 }
 .step-1 {
 	background-color: rgba(84, 84, 84, 0.25);
@@ -26,7 +42,7 @@
 	padding: 50px;
 }
 .grow {
- 	transition: all .2s ease-in-out;
+ 	transition: all .4s ease-in-out;
 }
 .grow:hover {
  	transform: scale(1.1);
