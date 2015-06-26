@@ -41,12 +41,22 @@
     padding: 200px;
 }
 .step-3 {
-	background-color: rgba(84, 84, 84, 0.25);
-	padding: 50px;
+	background-color: rgba(153, 153, 153, 0.15);
+	background: image-url("work.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 200px;
 }
 .step-4 {
 	background-color: rgba(153, 153, 153, 0.15);
-	padding: 50px;
+	background: image-url("book.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 200px;
 }
 .grow {
  	transition: all .4s ease-in-out;
