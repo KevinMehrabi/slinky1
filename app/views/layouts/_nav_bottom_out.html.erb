@@ -5,25 +5,19 @@
   <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-</body>
-</html>
-<nav class="navbar navbar-default navbar-fixed-bottom">
+  <nav class="navbar navbar-default navbar-fixed-bottom">
       <ul class="nav-list">
-      <!--  <li class="fa fa-5x fa-fw"> --><%#= link_to( image_tag("slinky-logo.png", size: "200%", :class => "icon-1 fa-fw"), sessions_show_path) %><!-- </li> -->
-              <!-- <li class="fa fa-home fa-5x fa-fw"></li> -->
-              <!-- <li class="nav-word">Profile</li> -->
           <%= link_to '/pages/about', :class => "icon-1" do %>
               <li class="fa fa-bullseye fa-5x fa-fw"></li>
               <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Slinky</li>
           <% end %>
 
-          <%= link_to '/users/edit', :class => "icon-1" do %>
+          <%= link_to '/users/edit', :class => "icon-1 jumper", :href => "#jump" do %>
               <li class="fa fa-home fa-5x fa-fw"></li>
               <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Profile</li>
           <% end %>
 
-          <%= link_to "/users/index", :class => "icon-2" do %>
+          <%= link_to "/users/index", :class => "icon-2 jumper", :href => "#jump" do %>
             <li class="fa fa-search fa-5x fa-fw"></li>
             <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Search</li>
           <% end %>
@@ -32,19 +26,12 @@
             <li class="fa fa-book fa-5x fa-fw"></li>
             <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Contacts</li>
           </span>
-          <% if current_user %>
-
-            <%= link_to "/auth/logout", :class => "icon-5" do %>
-                <li class="fa fa-sign-out fa-5x fa-fw"></li>
-                <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Logout</li>
-            <% end %>
-             
-          <% else %>
 
           <%= link_to "/auth/linkedin", :class => "icon-4" do %>
                 <li class="fa fa-sign-in fa-5x fa-fw"></li>
                 <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Sign In</li>
-            <% end %>
           <% end %>
       </ul>
   </nav>
+</body>
+</html>
