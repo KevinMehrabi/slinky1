@@ -29,7 +29,7 @@
         <td>Occupation: </td>
         <td><%= @user["description"] %></td>
     </tr>
-</table> 
+</table>
 <br />
 <div class="edit-address">Edit Current Location:</div>
     <%= form_for @user do |f| %>
@@ -51,10 +51,3 @@
             </div>
             <% end %>
         </div>
-
-
-<h2>User Contains</h2>
-<code>
-    <%= @user.inspect %>
-</code>
-<%= @user.inspect %>
