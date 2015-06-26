@@ -11,7 +11,7 @@
 }
 .top-about {
 	/*background-color: rgba(153, 153, 153, 0.15);*/
-	background: image-url("pen-copy.jpg") no-repeat center center fixed;
+	background: url("https://s3-us-west-1.amazonaws.com/the-slinky/pen-copy.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,7 +24,7 @@
 }
 .step-1 {
 	/*background-color: rgba(84, 84, 84, 0.25);*/
-	background: image-url("sm-image.jpg") no-repeat center center fixed;
+	background: url("https://s3-us-west-1.amazonaws.com/the-slinky/sm-image.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -33,7 +33,7 @@
 }
 .step-2 {
 	background-color: rgba(153, 153, 153, 0.15);
-	background: image-url("hand.jpg") no-repeat center center fixed;
+	background: url("https://s3-us-west-1.amazonaws.com/the-slinky/hand.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -41,12 +41,22 @@
     padding: 200px;
 }
 .step-3 {
-	background-color: rgba(84, 84, 84, 0.25);
-	padding: 50px;
+	background-color: rgba(153, 153, 153, 0.15);
+	background: url("https://s3-us-west-1.amazonaws.com/the-slinky/work.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 200px;
 }
 .step-4 {
 	background-color: rgba(153, 153, 153, 0.15);
-	padding: 50px;
+	background: url("https://s3-us-west-1.amazonaws.com/the-slinky/book.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 200px;
 }
 .grow {
  	transition: all .4s ease-in-out;
