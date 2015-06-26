@@ -15,10 +15,10 @@
             <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Search</li>
           <% end %>
 
-          <span class="icon-3">
+           <%= link_to "/bookmarks/index", :class => "icon-3" do %>
             <li class="fa fa-book fa-5x fa-fw"></li>
             <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Contacts</li>
-          </span>
+         <% end %>
 
             <%= link_to "/auth/logout", :class => "icon-5" do %>
                 <li class="fa fa-sign-out fa-5x fa-fw"></li>

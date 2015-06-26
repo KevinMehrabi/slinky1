@@ -27,10 +27,10 @@ class BookmarksController < ApplicationController
     @bookmark = current_user.bookmarks.build(:mark_id => params[:bookmark_id])
       if @bookmark.save
         flash[:notice] = "Added bookmark."
-        redirect_to root_url
+        redirect_to users_edit_path
       else
         flash[:error] = "Unable to add bookmark."
-        redirect_to root_url
+        redirect_to users_index_path
       end
   end
 
