@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
+  # before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
 
   # GET /bookmarks
   # GET /bookmarks.json
@@ -25,6 +25,7 @@ class BookmarksController < ApplicationController
   # POST /bookmarks.json
   def create
     @bookmark = current_user.bookmarks.build(:mark_id => params[:mark_id])
+<<<<<<< HEAD
       if @bookmark.save
         flash[:notice] = "Added bookmark."
         redirect_to root_url
@@ -32,6 +33,15 @@ class BookmarksController < ApplicationController
         flash[:error] = "Unable to add bookmark."
         redirect_to root_url
       end
+=======
+    if @bookmark.save
+      flash[:notice] = "Added bookmark."
+      redirect_to root_url
+    else
+      flash[:error] = "Unable to add bookmark."
+      redirect_to root_url
+    end
+>>>>>>> u5
   end
 
   # PATCH/PUT /bookmarks/1
