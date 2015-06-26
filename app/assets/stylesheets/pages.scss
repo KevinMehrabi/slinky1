@@ -1,7 +1,7 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@media screen and (min-width: 561px) {
+@media screen and (min-width: 670px) {
 	.about-h1 {
 		text-align: center;
 		margin: 10px 0;
@@ -14,8 +14,6 @@
 	    -o-background-size: cover;
 	    background-size: cover;
 	    padding: 200px;
-	    color: blue;
-	    cover: auto;
 	}
 	.top-about-text {
 		color: black;
@@ -64,19 +62,18 @@
 	 	margin: 10px; 
 	}
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 669px) {
 	.about-h1 {
 		text-align: center;
 		margin: 10px 0;
 	}
 	.top-about {
-		/*background-color: rgba(153, 153, 153, 0.15);*/
 		background: url("https://s3-us-west-1.amazonaws.com/the-slinky/pen-copy.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
-	    padding: 200px;
+	    padding: 80px;
 	    color: blue;
 	    cover: auto;
 	}
@@ -84,46 +81,35 @@
 		color: black;
 	}
 	.step-1 {
-		/*background-color: rgba(84, 84, 84, 0.25);*/
 		background: url("https://s3-us-west-1.amazonaws.com/the-slinky/sm-image.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
-	    padding: 200px;
+	    padding: 80px;
 	}
 	.step-2 {
-		background-color: rgba(153, 153, 153, 0.15);
 		background: url("https://s3-us-west-1.amazonaws.com/the-slinky/hand.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
-	    padding: 200px;
+	    padding: 80px;
 	}
 	.step-3 {
-		background-color: rgba(153, 153, 153, 0.15);
 		background: url("https://s3-us-west-1.amazonaws.com/the-slinky/work.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
-	    padding: 200px;
+	    padding: 80px;
 	}
 	.step-4 {
-		background-color: rgba(153, 153, 153, 0.15);
 		background: url("https://s3-us-west-1.amazonaws.com/the-slinky/book.jpg") no-repeat center center fixed;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
-	    padding: 200px;
-	}
-	.grow {
-	 	transition: all .4s ease-in-out;
-	}
-	.grow:hover {
-	 	transform: scale(1.1);
-	 	margin: 10px; 
+	    padding: 80px;
 	}
 }
