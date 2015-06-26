@@ -32,7 +32,6 @@ class BookmarksController < ApplicationController
         flash[:error] = "Unable to add bookmark."
         redirect_to root_url
       end
-    end
   end
 
   # PATCH/PUT /bookmarks/1
