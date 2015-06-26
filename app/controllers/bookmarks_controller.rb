@@ -1,5 +1,4 @@
 class BookmarksController < ApplicationController
-  # before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
 
   # GET /bookmarks
   # GET /bookmarks.json
@@ -34,37 +33,13 @@ class BookmarksController < ApplicationController
       end
   end
 
-  # PATCH/PUT /bookmarks/1
-  # PATCH/PUT /bookmarks/1.json
-  def update
-    respond_to do |format|
-      if @bookmark.update(bookmark_params)
-        format.html { redirect_to @bookmark, notice: 'Bookmark was successfully updated.' }
-        format.json { render :show, status: :ok, location: @bookmark }
-      else
-        format.html { render :edit }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.json
   def destroy
     @bookmark = current_user.bookmarks.find(params[:id])
     @bookmark.destroy
     flash[:notice] = "Removed bookmark."
-    redirect_to current_user
+    redirect_to bookmarks_path
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bookmark
-      @bookmark = Bookmark.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def bookmark_params
-      params.require(:bookmark).permit(:user_id, :mark_id, :create, :destroy)
-    end
 end

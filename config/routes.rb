@@ -2,18 +2,6 @@ Rails.application.routes.draw do
   resources :bookmarks
   get 'pages/about'
 
-  get 'bookmarks/create'
-
-  get 'bookmarks/destroy'
-
-  # get 'bookmark/user_id'
-
-  # get 'bookmark/bookmark_id'
-
-  get 'bookmark/create'
-
-  get 'bookmark/destroy'
-
   get 'users/index'
 
   get 'users/show'
