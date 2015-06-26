@@ -11,12 +11,12 @@
 }
 .top-about {
 	/*background-color: rgba(153, 153, 153, 0.15);*/
-	background: url("pen-copy.jpg") no-repeat center center fixed;
+	background: image-url("pen-copy.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 100px;
+    padding: 200px;
     color: blue;
 }
 .top-about-text {
@@ -24,21 +24,21 @@
 }
 .step-1 {
 	/*background-color: rgba(84, 84, 84, 0.25);*/
-	background: url("sm-image.jpg") no-repeat center center fixed;
+	background: image-url("sm-image.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 100px;
+    padding: 200px;
 }
 .step-2 {
 	background-color: rgba(153, 153, 153, 0.15);
-	background: url("hand.jpg") no-repeat center center fixed;
+	background: image-url("hand.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 100px;
+    padding: 200px;
 }
 .step-3 {
 	background-color: rgba(84, 84, 84, 0.25);
