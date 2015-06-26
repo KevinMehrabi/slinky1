@@ -3,4 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .about-h1 {
 	text-align: center;
+	margin: 0;
+}
+.top-about {
+	background-color: rgba(153, 153, 153, 0.15);
+	padding: 50px;
+}
+.step-1 {
+	background-color: rgba(84, 84, 84, 0.25);
+	padding: 50px;
+}
+.step-2 {
+	background-color: rgba(153, 153, 153, 0.15);
+	padding: 50px;
+}
+.step-3 {
+	background-color: rgba(84, 84, 84, 0.25);
+	padding: 50px;
+}
+.step-4 {
+	background-color: rgba(153, 153, 153, 0.15);
+	padding: 50px;
+}
+.grow {
+ 	transition: all .2s ease-in-out;
+}
+.grow:hover {
+ 	transform: scale(1.1);
+ 	margin: 10px; 
 }
