@@ -13,11 +13,11 @@
 <body onload="getLocation()">
  <% if current_user %>
     <div class="top_navbar">
-      <%= render "layouts/nav_loggedin" %>
+       <%= render "layouts/nav_loggedin" %>
     </div>
   <% else %>
   <div class="top_navbar">
-      <%= render "layouts/nav_loggedout" %>
+       <%= render "layouts/nav_loggedout" %>
     </div>
 <% end %>
 
@@ -37,11 +37,12 @@
 
 <% if current_user %>
   <div class="bottom_navbar">
-    <%= render "layouts/nav_bottom_in" %>
+    
+     <%= render "layouts/nav_bottomin" %>
   </div>
 <% else %>
    <div class="bottom_navbar">
-    <%= render "layouts/nav_bottom_out" %>
+    <%= render "layouts/nav_bottomout" %>
   </div>
 <% end %>
 
