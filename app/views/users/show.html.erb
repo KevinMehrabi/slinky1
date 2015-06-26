@@ -1,17 +1,5 @@
 <h2 class="span7 text-center">User Information</h2>
 
-
-<h2>Bookmarks</h2>
-<ul>
-  <% @user.bookmarks.each do |bookmark| %>
-    <li>
-      <%=bookmark.mark.name %>
-      <%= link_to "remove", bookmark, :method => :delete %>
-    </li>
-  <% end %>
-</ul>
-
-
 <table class="table">
 
     <tr>
