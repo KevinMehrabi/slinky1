@@ -47,7 +47,7 @@ Rails.application.routes.draw do
 
   get 'auth/logout' => 'sessions#destroy'
 
-root 'sessions#new'
+root 'pages#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
