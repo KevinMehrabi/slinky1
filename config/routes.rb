@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :bookmarks
   get 'pages/about'
 
   get 'bookmarks/create'
