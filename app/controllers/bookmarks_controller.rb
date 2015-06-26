@@ -50,7 +50,6 @@ class BookmarksController < ApplicationController
 
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.json
-
   def destroy
     @bookmark = current_user.bookmarks.find(params[:id])
     @bookmark.destroy
