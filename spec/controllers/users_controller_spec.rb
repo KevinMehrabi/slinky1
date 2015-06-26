@@ -8,6 +8,7 @@ RSpec.describe UsersController, type: :controller do
       @user = FactoryGirl.create(:user)
       @user2 = FactoryGirl.create(:user2)
       @users = User.all
+
   end
 
   describe "GET /users.json" do
@@ -17,6 +18,8 @@ RSpec.describe UsersController, type: :controller do
  
     context 'all users' do 
       it 'returns the user names' do
+        user = User.create
+        session[:user_id] = user.id
         expect(json.collect{|l| l["name"]}).to include(@user.name, @user2.name)
       end
     end
@@ -31,18 +34,6 @@ RSpec.describe UsersController, type: :controller do
   end
 end
 
-<<<<<<< HEAD
-  describe "GET #show" do
-    before do 
-      get :index, format: :json, id: 1
-    end
-    context 'one listing' do 
-      it 'returns one listing' do 
-        expect(@user2.first_name).to eq("Joe")
-      end
-    end
-  end
-=======
   # describe "GET #show" do
   #   before do 
   #     get :index, format: :json, id: 1
@@ -53,7 +44,6 @@ end
   #     end
   #   end
   # end
->>>>>>> json
 
   # describe "GET #new" do
   #   it "returns http success" do
