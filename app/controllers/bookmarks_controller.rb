@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
+  # before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
 
   # GET /bookmarks
   # GET /bookmarks.json
@@ -24,16 +24,13 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.json
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-
-    respond_to do |format|
-      if @bookmark.save
-        format.html { redirect_to @bookmark, notice: 'Bookmark was successfully created.' }
-        format.json { render :show, status: :created, location: @bookmark }
-      else
-        format.html { render :new }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
-      end
+    @bookmark = current_user.bookmarks.build(:mark_id => params[:mark_id])
+    if @bookmark.save
+      flash[:notice] = "Added bookmark."
+      redirect_to root_url
+    else
+      flash[:error] = "Unable to add bookmark."
+      redirect_to root_url
     end
   end
 
@@ -54,11 +51,10 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1
   # DELETE /bookmarks/1.json
   def destroy
+    @bookmark = current_user.bookmarks.find(params[:id])
     @bookmark.destroy
-    respond_to do |format|
-      format.html { redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice] = "Removed bookmark."
+    redirect_to current_user
   end
 
   private
