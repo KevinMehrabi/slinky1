@@ -6,32 +6,39 @@
 }*/
 
 .about-h1 {
-	color: #333333;
 	text-align: center;
-	text-shadow: 1px 1px white;
-	margin: 0;
+	margin: 10px 0;
 }
 .top-about {
 	/*background-color: rgba(153, 153, 153, 0.15);*/
-	background: url("pen.jpg") no-repeat center center fixed;
+	background: url("pen-copy.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     padding: 100px;
-
-	/*padding: 50px;*/
+    color: blue;
 }
-.top-about:hover {
-
+.top-about-text {
+	color: black;
 }
 .step-1 {
-	background-color: rgba(84, 84, 84, 0.25);
-	padding: 50px;
+	/*background-color: rgba(84, 84, 84, 0.25);*/
+	background: url("sm-image.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 100px;
 }
 .step-2 {
 	background-color: rgba(153, 153, 153, 0.15);
-	padding: 50px;
+	background: url("hand.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 100px;
 }
 .step-3 {
 	background-color: rgba(84, 84, 84, 0.25);
