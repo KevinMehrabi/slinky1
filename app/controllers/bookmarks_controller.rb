@@ -32,13 +32,6 @@ class BookmarksController < ApplicationController
         flash[:error] = "Unable to add bookmark."
         redirect_to root_url
       end
-    if @bookmark.save
-      flash[:notice] = "Added bookmark."
-      redirect_to root_url
-    else
-      flash[:error] = "Unable to add bookmark."
-      redirect_to root_url
-    end
   end
 
   # PATCH/PUT /bookmarks/1
