@@ -26,10 +26,10 @@
 	<div class="map" id="map"></div>
 		<script type="text/javascript" class="google-map" id="map">
 		handler = Gmaps.build('Google');
-		handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-		markers = handler.addMarkers(<%=raw @hash.to_json %>);
-		handler.bounds.extendWith(markers);
-		handler.fitMapToBounds();
+		handler.buildMap({ provider: {scrollwheel: false}, internal: {id: 'map'}}, function(){
+			markers = handler.addMarkers(<%=raw @hash.to_json %>);
+			handler.bounds.extendWith(markers);
+			handler.fitMapToBounds();
 		});
 		</script>
 
