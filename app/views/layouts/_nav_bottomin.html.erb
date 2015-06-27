@@ -8,28 +8,28 @@
   <nav class="navbar-default navbar-fixed-bottom">
         <ul class="nav-list">
             <%= link_to '/pages/about', :class => "icon-1" do %>
-                <li class="fa fa-bullseye fa-5x fa-fw"></li>
-                <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Slinky</li>
-            <% end %>
-
-            <%= link_to '/users/edit', :class => "icon-1" do %>
                 <li class="fa fa-home fa-5x fa-fw"></li>
-                <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Profile</li>
-            <% end %>
-
-            <%= link_to "/users/index", :class => "icon-2" do %>
-              <li class="fa fa-search fa-5x fa-fw"></li>
-              <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Search</li>
+                <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;"></li>
             <% end %>
 
             <%= link_to "/bookmarks", :class => "icon-2" do %>
               <li class="fa fa-book fa-5x fa-fw"></li>
-              <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Contacts</li>
+              <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;"></li>
+            <% end %>
+
+            <%= link_to "/users/index", :class => "icon-2" do %>
+              <li class="fa fa-search fa-5x fa-fw"></li>
+              <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;"></li>
+            <% end %>
+
+             <%= link_to '/users/edit', :class => "icon-1" do %>
+                <li class="fa fa-cog fa-5x fa-fw"></li>
+                <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;"></li>
             <% end %>
 
               <%= link_to "/auth/logout", :class => "icon-5" do %>
                   <li class="fa fa-sign-out fa-5x fa-fw"></li>
-                  <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;">Logout</li>
+                  <li class="nav-word" style="font-family: 'IM Fell DW Pica', serif;"></li>
               <% end %>
         </ul>
     </nav>
