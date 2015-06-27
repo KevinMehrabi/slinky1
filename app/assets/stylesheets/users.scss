@@ -30,7 +30,7 @@ span {
 
 #profile-link {
   text-decoration: none;
-  color: #999;
+ /* color: #999;*/
 }
 #profile-link:hover {
   color: #63B8FF;
@@ -82,6 +82,12 @@ span {
 #button-container {
   display: block;
   text-align: center;
+}
+#star {
+  text-decoration: none;
+}
+#star:hover {
+  color: #cccc00;
 }
 
 @-webkit-keyframes bounce {
