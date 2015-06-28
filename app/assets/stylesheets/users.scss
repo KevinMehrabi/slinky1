@@ -27,8 +27,6 @@ span {
 .edit-address:hover {
   
 }
-
-
 .btn.outline {
     background: none;
     padding: 12px 22px;
@@ -38,12 +36,12 @@ span {
     color: #5cb85c;
 }
 .btn-success.outline:hover, .btn-success.outline:focus, .btn-success.outline:active, .btn-success.outline.active, .open > .dropdown-toggle.btn-success {
-    color: #5cb85c;
+    color: #fff;
     border-color: #5cb85c;
 }
 .btn-success.outline:active, .btn-success.outline.active {
-    border-color: #5cb85c;
-    color: #5cb85c;
+    border-color: #fff;
+    color: #fff;
     box-shadow: none;
 }
 .btn-warning.outline {
@@ -51,20 +49,14 @@ span {
     color: #f0ad4e;
 }
 .btn-warning.outline:hover, .btn-warning.outline:focus, .btn-warning.outline:active, .btn-warning.outline.active, .open > .dropdown-toggle.btn-warning {
-    color: #f0ad4e;
+    color: #ffffff;
     border-color: #f0ad4e;
 }
 .btn-warning.outline:active, .btn-warning.outline.active {
-    border-color: #f0ad4e;
-    color: #f0ad4e;
+    border-color: #ffffff;
+    color: #ffffff;
     box-shadow: none;
 }
-/*#profile-link {
-  text-decoration: none;
- /* color: #999;*/
-/*#profile-link:hover {
-  color: green;
-}*/
 .btn-padding {
   margin: 5px;
 }
