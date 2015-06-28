@@ -1,17 +1,38 @@
 // Place all the styles related to the bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-td {
-	/*width: 20%;*/
+@media screen and (min-width: 561px) {
+	td {
+		padding: 0px;
+	}
+	.table-condensed {
+		padding: 20px;
+	}
+	.row-margin {
+		width: 100%;
+	}
+	.red-button {
+		width: 40px;
+		text-align: center;
+	}
+	.green-button {
+		width: 40px;
+		text-align: center;
+	}
 }
-.row-margin {
-	width: 100%;
-}
-.red-button {
-	width: 40px;
-	text-align: center;
-}
-.green-button {
-	width: 40px;
-	text-align: center;
+@media screen and (max-width: 560px) {
+	td {
+		padding: 5px;
+	}
+	.row-margin {
+		width: 100%;
+	}
+	.red-button {
+		width: 40px;
+		text-align: center;
+	}
+	.green-button {
+		width: 40px;
+		text-align: center;
+	}
 }
