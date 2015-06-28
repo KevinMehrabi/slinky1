@@ -5,9 +5,10 @@
       <div class="col-md-12 font-gray"><h4><%= user.location %></h4></div>
       <div class="col-md-12 font-gray"><h5><%= user.description %></h5></div>
       <div class="col-md-12">
-        <%= link_to " ", user_path(user.id), id: "profile-link", :class => "btn btn-success fa fa-envelope btn-padding" %> 
-        <%= link_to " ", bookmarks_path(bookmark_id: user), :method => :post, :class => "btn btn-warning fa fa-star-o btn-padding", :id => "star" %>
+        <%= link_to " ", user_path(user.id), id: "profile-link", :class => "btn btn-success outline fa fa-envelope fa-lg" %> 
+        <%= link_to " ", bookmarks_path(bookmark_id: user), :method => :post, :class => "btn btn-warning outline fa fa-star-o fa-lg", :id => "star" %>
       </div>
+      <div class="row span7 text-center"></div>
         <br />
       <div>
         <img src="<%= user.image_url %>" width="100" />
