@@ -2,7 +2,7 @@
 
 <h1>Listing Bookmarks</h1>
 
-<table>
+<table class="table table-hover table-margin">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,8 +18,8 @@
         <td><%= bookmark.mark.name %></td>
         <td><%= bookmark.mark.description %></td>
         <td><%= bookmark.mark.location %></td>
-        <td><%= link_to 'Show', user_path(bookmark.mark.id) %></td>
-        <td><%= link_to 'X', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'More Info', user_path(bookmark.mark.id) %></td>
+        <td><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
