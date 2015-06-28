@@ -18,8 +18,8 @@
         <td><%= bookmark.mark.name %></td>
         <td><%= bookmark.mark.description %></td>
         <td><%= bookmark.mark.location %></td>
-        <td><%= link_to 'Contact', user_path(bookmark.mark.id), :class => "btn btn-success green-button" %></td>
-        <td><%= link_to 'Delete', bookmark, :class => "btn btn-danger red-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' ', user_path(bookmark.mark.id), :class => "btn btn-success green-button fa fa-envelope-o" %></td>
+        <td><%= link_to ' ', bookmark, :class => "btn btn-danger red-button fa fa-trash-o", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
