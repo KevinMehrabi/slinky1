@@ -57,6 +57,11 @@
 	    background-size: cover;
 	    padding: 200px;
 	}
+	#slinky-logo {
+		width: 200px;
+		position: relative;
+		bottom: 50px;
+	}
 }
 @media screen and (max-width: 669px) {
 	.about-h1 {
@@ -108,4 +113,10 @@
 	    background-size: cover;
 	    padding: 80px;
 	}
+	#slinky-logo {
+		width: 200px;
+		position: relative;
+		bottom: 50px;
+	}
+
 }
