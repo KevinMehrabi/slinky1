@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 	has_many :bookmarks
 	has_many :marks, :through => :bookmarks
 
-	paginates_per 5
 	geocoded_by :full_address
 	after_validation :geocode
 	
