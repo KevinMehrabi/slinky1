@@ -14,7 +14,6 @@
     <tr class="row-margin">
       <th>Name</th>
       <th>Occupation</th>
-      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +23,8 @@
       <tr>
         <td><%= bookmark.mark.name %></td>
         <td><%= bookmark.mark.description %></td>
-        <td><%= bookmark.mark.location %></td>
-        <td><%= link_to ' ', user_path(bookmark.mark.id), :class => "btn btn-success outline green-button fa fa-envelope-o fa-lg" %></td>
-        <td><%= link_to ' ', bookmark, :class => "btn btn-danger outline red-button fa fa-trash-o fa-lg", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' ', user_path(bookmark.mark.id), :class => "btn btn-success outline green-button fa fa-envelope-o fa-lg bookmark-button" %></td>
+        <td><%= link_to ' ', bookmark, :class => "btn btn-danger outline red-button fa fa-trash-o fa-lg bookmark-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
