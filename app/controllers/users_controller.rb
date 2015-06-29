@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: current_user)
     if user.current_location
       redirect_to users_edit_path
-      flash[:success] = "current_location already exists"
+      flash[:success] = "Current location already exists"
     else
       user.update_attributes(user_params)
       redirect_to users_edit_path
@@ -71,7 +71,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: session[:user_id])
 
       if @user.update_attributes(user_params)
-        flash[:notice] = "Address successfully updated."
+        flash[:success] = "Address successfully updated."
         redirect_to users_edit_path
       else
         render users_edit_path
