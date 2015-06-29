@@ -4,11 +4,19 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.json
   def index
     @bookmarks = Bookmark.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @bookmarks }
+    end
   end
 
   # GET /bookmarks/1
   # GET /bookmarks/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /bookmarks/new
