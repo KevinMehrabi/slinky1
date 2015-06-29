@@ -25,10 +25,10 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.build(:mark_id => params[:bookmark_id])
       if @bookmark.save
-        flash[:notice] = "Added bookmark."
+        flash[:success] = "Added bookmark."
         redirect_to bookmarks_path
       else
-        flash[:error] = "Unable to add bookmark."
+        flash[:success] = "Unable to add bookmark."
         redirect_to users_index_path
       end
   end
@@ -38,7 +38,7 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = current_user.bookmarks.find(params[:id])
     @bookmark.destroy
-    flash[:notice] = "Removed bookmark."
+    flash[:success] = "Removed bookmark."
     redirect_to bookmarks_path
   end
 
