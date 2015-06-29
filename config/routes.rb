@@ -29,6 +29,10 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
   resources :users
 
+  namespace :api do
+    resources :users
+  end
+
   get "/auth/:provider/callback" => "sessions#create"
 
   get 'sessions/show'
