@@ -19,14 +19,16 @@
   </thead>
 
   <tbody>
-    <% @bookmarks.each do |bookmark| %>
-      <tr>
-        <td><%= bookmark.mark.name %></td>
-        <td><%= bookmark.mark.description %></td>
-        <td><%= bookmark.mark.location %></td>
-        <td><%= link_to ' ', user_path(bookmark.mark.id), :class => "btn btn-success outline green-button fa fa-envelope-o fa-lg" %></td>
-        <td><%= link_to ' ', bookmark, :class => "btn btn-danger outline red-button fa fa-trash-o fa-lg", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% @bookmarks.each do |bookmark| %>
+        <% if current_user.id == bookmark.user_id %> 
+          <tr>
+            <td><%= bookmark.mark.name %></td>
+            <td><%= bookmark.mark.description %></td>
+            <td><%= bookmark.mark.location %></td>
+            <td><%= link_to ' ', user_path(bookmark.mark.id), :class => "btn btn-success outline green-button fa fa-envelope-o fa-lg" %></td>
+            <td><%= link_to ' ', bookmark, :class => "btn btn-danger outline red-button fa fa-trash-o fa-lg", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>
