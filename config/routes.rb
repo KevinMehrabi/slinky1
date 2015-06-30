@@ -33,6 +33,10 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :show]
   end
 
+  namespace :api do
+    resources :bookmarks, only: [:index, :show]
+  end
+
   get "/auth/:provider/callback" => "sessions#create"
 
   get 'sessions/show'
