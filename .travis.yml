@@ -7,3 +7,4 @@ addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database slinky1_test;' -U postgres
+  - bundle exec rake db:setup
