@@ -51,12 +51,12 @@ class UsersController < ApplicationController
   def create
     user = User.find_by(id: current_user)
     if user.current_location
-      redirect_to users_edit_path
-      flash[:success] = "Current location already exists"
+      redirect_to users_index_path
+      flash[:success] = "Location successfully updated. Now please find other professionals!"
     else
       user.update_attributes(user_params)
-      redirect_to users_edit_path
-      flash[:success] = "Location successfully updated."
+      redirect_to users_index_path
+      flash[:success] = "Location successfully updated. Now please find other professionals!"
     end
   end
 
