@@ -31,7 +31,7 @@ class BookmarksController < ApplicationController
   # POST /bookmarks
   # POST /bookmarks.json
   def create
-    @bookmark = current_user.bookmarks.build(:mark_id => params[:bookmark_id])
+    @bookmark = current_user.bookmarks.find_or_create_by(:mark_id => params[:bookmark_id])
       if @bookmark.save
         flash[:success] = "Added bookmark."
         redirect_to bookmarks_path
