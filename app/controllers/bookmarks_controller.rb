@@ -49,4 +49,5 @@ class BookmarksController < ApplicationController
     flash[:success] = "Removed bookmark."
     redirect_to bookmarks_path
   end
+  
 end
